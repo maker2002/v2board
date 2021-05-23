@@ -32,17 +32,15 @@
 <script src="/assets/user/components.async.js?v={{$verison}}"></script>
 <script src="/assets/user/umi.js?v={{$verison}}"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1E9Z5LRRK"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C3WVW4M3Z5"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
+  {literal}
+  function gtag(){dataLayer.push(arguments);}
+  {/literal}
+  gtag('js', new Date());
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-P1E9Z5LRRK');
+  gtag('config', 'G-C3WVW4M3Z5');
 </script>
 </body>
 
