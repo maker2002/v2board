@@ -317,7 +317,7 @@ CREATE TABLE `v2_user` (
                            `invite_user_id` int(11) DEFAULT NULL,
                            `telegram_id` bigint(20) DEFAULT NULL,
                            `email` varchar(64) NOT NULL,
-                           `password` varchar(64) NOT NULL,
+                           `password` varchar(128) NOT NULL,
                            `password_algo` char(10) DEFAULT NULL,
                            `balance` int(11) NOT NULL DEFAULT '0',
                            `discount` int(11) DEFAULT NULL,

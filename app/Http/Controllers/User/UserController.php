@@ -38,7 +38,7 @@ class UserController extends Controller
         ) {
             abort(500, __('user.user.changePassword.old_password_wrong'));
         }
-        $user->password = password_hash($request->input('new_password'), PASSWORD_DEFAULT);
+        $user->password = password_hash($request->input('new_password'), PASSWORD_ARGON2ID);
         $user->password_algo = NULL;
         if (!$user->save()) {
             abort(500, __('user.user.changePassword.save_failed'));

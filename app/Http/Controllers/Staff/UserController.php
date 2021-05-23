@@ -38,7 +38,7 @@ class UserController extends Controller
             abort(500, '邮箱已被使用');
         }
         if (isset($params['password'])) {
-            $params['password'] = password_hash($params['password'], PASSWORD_DEFAULT);
+            $params['password'] = password_hash($params['password'], PASSWORD_ARGON2ID);
             $params['password_algo'] = NULL;
         } else {
             unset($params['password']);
