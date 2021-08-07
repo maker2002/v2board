@@ -32,13 +32,15 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3WVW4M3Z5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  {literal}
-  function gtag(){dataLayer.push(arguments);}
-  {/literal}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-C3WVW4M3Z5');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-C3WVW4M3Z5');
 </script>
 </body>
 
