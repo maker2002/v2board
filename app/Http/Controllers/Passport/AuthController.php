@@ -65,7 +65,7 @@ class AuthController extends Controller
         }
         $user = new User();
         $user->email = $email;
-        $user->password = password_hash($password, PASSWORD_DEFAULT);
+        $user->password = password_hash($password, PASSWORD_ARGON2ID);
         $user->uuid = Helper::guid(true);
         $user->token = Helper::guid();
         if ($request->input('invite_code')) {
@@ -254,7 +254,7 @@ class AuthController extends Controller
         if (!$user) {
             abort(500, __('This email is not registered in the system'));
         }
-        $user->password = password_hash($request->input('password'), PASSWORD_DEFAULT);
+        $user->password = password_hash($request->input('password'), PASSWORD_ARGON2ID);
         $user->password_algo = NULL;
         $user->password_salt = NULL;
         if (!$user->save()) {

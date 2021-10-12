@@ -40,7 +40,7 @@
 <script src="/theme/{{$theme}}/assets/components.async.js?v={{$verison}}"></script>
 <script src="/theme/{{$theme}}/assets/umi.js?v={{$verison}}"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1E9Z5LRRK"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C3WVW4M3Z5"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -50,7 +50,7 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-P1E9Z5LRRK');
+    gtag('config', 'G-C3WVW4M3Z5');</script>
 </script>
 </body>
 
