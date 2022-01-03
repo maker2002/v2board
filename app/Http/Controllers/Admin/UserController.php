@@ -181,14 +181,10 @@ class UserController extends Controller
                 'uuid' => Helper::guid(true),
                 'token' => Helper::guid()
             ];
-<<<<<<< HEAD
-            $user['password'] = password_hash($request->input('password') ?? $user['email'], PASSWORD_ARGON2ID);
-=======
             if (User::where('email', $user['email'])->first()) {
                 abort(500, '邮箱已存在于系统中');
             }
-            $user['password'] = password_hash($request->input('password') ?? $user['email'], PASSWORD_DEFAULT);
->>>>>>> 339ab3925ffe76f895bc912e07b61bf869546c84
+            $user['password'] = password_hash($request->input('password') ?? $user['email'], PASSWORD_ARGON2ID);
             if (!User::create($user)) {
                 abort(500, '生成失败');
             }
